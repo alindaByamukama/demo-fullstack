@@ -3,16 +3,15 @@
 <hr>
 
 ### Frontend Tech
-- [ ] Pug
-- [ ] JS Form Validation
-- [ ] CSS
-- [ ] Boostrap 
+- [ ] Pug - install and setup (Public and Views dirs)
+- [ ] JS Form Validation and Handling 
+- [ ] CSS and Boostrap - project styling 
 
 ### Backend Tech
-- [ ] Nodejs - npm
-- [ ] Express - server setup
-- [ ] Mongoose ORM - database setup
-- [ ] MongoDB - database management
+- [ ] Nodejs - project setup, dependancy installation, other configurations
+- [ ] Express - server setup/ connection/ configuration, routes, body-parser
+- [ ] Mongoose Object Relational Model - database management, schemas, models, documents
+- [ ] MongoDB - database developmen, db creation, collections, insertion of document into a collection
 
 #### More functionality to come! 
 - Updating profile information
