@@ -1,0 +1,81 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Landing
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  body
+    //- HEADER CONTAINER
+    header
+    // Fixed navbar
+    nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+        .container-fluid
+        a.navbar-brand(href='#') Fixed navbar
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarCollapse.collapse.navbar-collapse
+            ul.navbar-nav.me-auto.mb-2.mb-md-0
+            li.nav-item
+                a.nav-link.active(aria-current='page', href='#') Home
+            li.nav-item
+                a.nav-link(href='#') Link
+            li.nav-item
+                a.nav-link.disabled Disabled
+            form.d-flex(role='search')
+            input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+            button.btn.btn-outline-success(type='submit') Search
+    //- HERO CONTAINER
+    .container.col-xl-10.col-xxl-8.px-4.py-5
+      .row.align-items-center.g-lg-5.py-5
+        .col-lg-7.text-center.text-lg-start
+          h1.display-4.fw-bold.lh-1.mb-3 Vertically centered hero sign-up form
+          p.col-lg-10.fs-4
+            | Below is an example form built entirely with Bootstrap&rsquo;s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+        .col-md-10.mx-auto.col-lg-5
+          form.p-4.p-md-5.border.rounded-3.bg-light.needs-validation(novalidate, action='POST')
+            .form-floating.mb-3
+              input#floatingInput.form-control(type='email', placeholder='name@example.com', pattern='([A-Za-z0-9]+(\\.[A-Za-z0-9]+)+)@student\\.ciu\\.ac\\.ug', required)
+              label(for='floatingInput') Email address
+              .valid-feedback 
+                | Looks good! 
+              .invalid-feedback 
+                | Something is not right, try again Eg. example@email.com 
+                
+                - const today = new Date()
+                - const year = today.getFullYear()
+                - const maximum = year - 18
+                - const minimum = year - 65
+
+            .form-floating.mb-3
+                //- Maximum age is 18 years of age and min is 65 years
+
+                input#floatingInput.form-control(type='date', placeholder='', pattern='', max=maximum+'-12-31', min=minimum+'-12-31', required)
+                label(for='floatingInput') Enter date
+                .invalid-feedback 
+                    | Minimum age is 18 and Maximum age is 65
+
+            .form-floating.mb-3
+              input#floatingPassword.form-control(type='password', placeholder='Password', pattern='(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}', required)
+              label(for='floatingPassword') Password
+              .valid-feedback 
+                | Looks good! 
+              .invalid-feedback 
+                | Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters 
+
+            .checkbox.mb-3
+              label
+                input(type='checkbox', value='remember-me')
+                |  Remember me
+                .invalid-feedback 
+                    | Are you sure?
+            button.w-100.btn.btn-lg.btn-primary(type='submit') Sign up
+            hr.my-4
+            small.text-muted By clicking Sign up, you agree to the terms of use.
+    footer(class="footer mt-auto py-3 bg-light")
+        div(class="container")
+            span(class="text-muted") Place sticky footer content here.
+        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+script(src="/js/formValidation.js") 
